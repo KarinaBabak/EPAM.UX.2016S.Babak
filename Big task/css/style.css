@@ -4,12 +4,12 @@
 }
 
 body {
-	font-family: "MyriadProRegular", Myriad, Tahoma, sans-serif;
+	font-family: "MyriadProRegular", Myriad, Arial, sans-serif;
 }
 
 .main{
 	width: 900px;
-	margin:62px auto;	
+	margin:54px auto;	
 }
 
 .left_panel{
@@ -17,8 +17,8 @@ body {
 	float: left;
 }
 .right_panel {
-	width: 500px;
-	float: right;
+    width: 510px;
+    float: right;
 }
 
 .photo_box{
@@ -26,7 +26,7 @@ body {
 	text-align:center;
 	width:100%;
 	line-height: 40px;
-	margin-bottom:45px;
+	margin:7px 0 48px 0;
 }
 
 .name
@@ -35,22 +35,23 @@ body {
 }
 
 .photo_box h1{ 
-	padding: 14px 0 1px 0;
-	font-size: 42px;	
+	padding: 11px 0 1px 0;
+	font-size: 45px;	
 	font-weight: normal;
 	font-variant:small-caps;
 }
 
 .photo_box h2{     
-	font-size: 44px;	
+	font-size: 49px;	
 	text-transform: uppercase;
 	font-weight: bold;	
+	font-family: "MyriadProBold";
 }
 
 .photo_box h3{
-	font-size: 18px;	
-	text-transform: uppercase;
-	font-weight: bold;	
+	font-size: 19px;	
+	text-transform: uppercase;	
+	font-family: "MyriadProBold";
 }
 
 .photo_box img{    
@@ -60,22 +61,25 @@ body {
 .section{
 	margin: 0 0 28px 0;
     float: left;
-	font-size: 12px;	
+	font-size: 13px;	
 	width: 100%;
 }
 .section .section-header{
 	white-space:nowrap;
 	overflow:hidden;
-	margin:3px 0;
+	margin: 3px 0 10px 0;
 }
 
 .section .section-header .name-section h2{
 	display: inline-block;
-	font-size: 30px;
+	font-size: 32px;
 	color: #0270ba;
 	text-transform: uppercase;	
-	margin: 0 0 0 5px;
-	
+	margin: 0 0 0 4px;
+	font-family: "MyriadProBold";
+}
+.right_panel .section-header .name-section h2{
+	margin: 0 0 0 13px;
 }
 
 .section .icon-of-section, .section .name-section, .section .line{
@@ -94,30 +98,39 @@ body {
 	margin:0;	
 }
 
-.section .contant-row{
-	margin-top:	22px;
-	font-size:15px;
+.section .contant{
+    margin-top: 24px;
+    font-size: 16px;
 }
 
-.section .contant-row b{
+.section .contant b{
 	color: #0270ba;
+	font-family: "MyriadProBold";
+    font-size: 16px;
 	text-transform: uppercase;	
 }
 .section .contact-information{
 	float:right;
-	width:72%;	
+	width:70%;	
+}
+
+.skills_box{
+	margin:23px 0;
 }
 .skill{
-	width:294px;
-	margin:10px auto;
+	width:268px;
+	margin:13px auto;
 	text-align:center;
 	font-size:18px;
 	text-transform:uppercase;	
 	clear: both;
 }
-.skill-progress{margin: 4px 0 0 0;}
+.skill-progress{
+	margin: 4px 0 0 0;
+}
+
 .skill li{	
-	margin:0 5px;
+	margin:0 4px;
 	display:inline-block;
 	width: 14px;
 	height: 14px;
@@ -129,9 +142,60 @@ body {
 	background-color: #e6e6e6;
 }
 
+.section .item{
+	margin: 19px 0 0 9px;
+	clear: both;
+}
 
+.section .item .dot{
+	width:16px;
+	height:16px;
+	border-radius:8px;
+	float:left;
+	background-color:black;
+    margin-top: 7px;
+}
+.section .item .content p b{
+	margin-right: 13px;
+	font-family: "MyriadProBold";
+	text-transform: uppercase;	
+}
+.section .item .content p b.blue{
+	color: #0270ba;
+}
+.section .item .title{
+	font-size: 20px;
+}
+.section .subtitle{
+	font-size: 20px;
+    text-transform: uppercase;
+    margin: 4px 0 3px;
+}
+.section .item .content{
+	width: 93.3%;
+	float:right;
+	margin-bottom: 10px;
+}
+.section .soft{
+	width:44%;
+	float:left;
+	margin: 9px 0;
+}
 
+.section .soft:nth-child(2n){		
+	margin-right:12%;
+}
 
+.section .soft .soft-progress{
+	width:100%;	
+	background-color: #e6e6e6;	
+	margin: 8px 0 0 0;
+}
+
+.section .soft .progress{	
+	height:18px;
+	background-color: #0270ba;
+}
 
 /* font-family: "MyriadProRegular"; */
 @font-face {
