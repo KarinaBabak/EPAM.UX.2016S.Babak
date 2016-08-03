@@ -9,7 +9,7 @@ body {
 
 .main{
 	width: 900px;
-	margin:54px auto;	
+	margin: 54px auto 10px auto;
 }
 
 .left_panel{
@@ -62,7 +62,7 @@ body {
 	margin: 0 0 28px 0;
     float: left;
 	font-size: 13px;	
-	width: 100%;
+	width: 100%;	
 }
 .section .section-header{
 	white-space:nowrap;
@@ -144,27 +144,44 @@ body {
 
 .section .item{
 	margin: 19px 0 0 9px;
-	clear: both;
+	float:right;
+	clear: both;	
 }
 
-.section .item .dot{
+.item .content .title::before{	
 	width:16px;
 	height:16px;
 	border-radius:8px;
 	float:left;
 	background-color:black;
-    margin-top: 7px;
+    margin-top: 7px;	
+	content:"";
+	margin-left: -35px;
+	position: absolute;
 }
 .section .item .content p b{
 	margin-right: 13px;
 	font-family: "MyriadProBold";
 	text-transform: uppercase;	
 }
-.section .item .content p b.blue{
-	color: #0270ba;
+.section .item .content p.text-size{	
+    overflow: hidden;     
+    text-overflow: ellipsis; 
+}
+.section .item .content .title h1{
+	font-size: 20px;
+	font-family: "MyriadProBold";
+	color: #0270ba;	
 }
 .section .item .title{
 	font-size: 20px;
+}
+
+.section .content h2{
+	font-size: 20px;
+	font-weight: normal;	
+    text-transform: uppercase;
+    margin: 4px 0 3px;
 }
 .section .subtitle{
 	font-size: 20px;
@@ -174,8 +191,17 @@ body {
 .section .item .content{
 	width: 93.3%;
 	float:right;
-	margin-bottom: 10px;
+	margin-bottom: 10px;	
 }
+
+.section .item .content .title h1::after{
+	content:"// Feb 2011 - Jun 2014";
+	font-family: "MyriadProRegular";
+	margin-left:22px;
+	color:black;
+	font-weight:normal;
+}
+
 .section .soft{
 	width:44%;
 	float:left;
@@ -196,6 +222,21 @@ body {
 	height:18px;
 	background-color: #0270ba;
 }
+
+.width-94{
+	width:94%;
+}
+
+footer{
+	height: 57px;	
+	background-image: url(../images/logo.png);
+	background-size:34%;
+	background-position: center;
+	background-repeat: no-repeat;
+	clear:both;	
+}
+
+
 
 /* font-family: "MyriadProRegular"; */
 @font-face {
