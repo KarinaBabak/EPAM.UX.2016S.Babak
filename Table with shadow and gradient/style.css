@@ -1,0 +1,58 @@
+table{	
+	width: 700px;	
+	border-collapse: collapse;		
+	border-radius:12px;	
+	border-spacing: 10px;
+	box-shadow:  0px 0px 15px rgba(0,0,0,0.5), 0px 0px 8px rgba(0,0,0,0.5), 0px 0px 8px rgba(0,0,0,0.5);
+}
+
+tr td:after{
+	content:"(mln)";
+}
+
+tr td:first-child:lang(en):after {	
+	content:"($)";
+}
+
+td{	
+	border-right:1px solid black;	
+	padding:4px;
+}
+
+tr{
+	text-align:center;	
+}
+
+tr td:first-child:first-letter{
+	color:red;
+}
+
+th{
+	background-color:black;
+	text-shadow:black 3px 3px 4px;
+	color:white;
+	border-right: 1px solid gray;
+	padding:4px;	
+}
+
+th:last-child, td:last-child{
+	border-radius: 0 12px 0 0;	
+	border-right:none;
+}
+
+th:first-child{
+	border-radius: 12px 0 0 0;
+}
+
+tr:hover{
+	background:linear-gradient(to right, gold 10%, LemonChiffon 50%);
+	background-attachment: fixed;
+	cursor: pointer;
+}
+
+tr th:hover{	
+	cursor: default;
+}
+
+
+
