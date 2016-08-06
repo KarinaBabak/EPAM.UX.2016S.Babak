@@ -10,7 +10,9 @@
 <div class="main">
 	<div class="left_panel">	
 		<div class="photo-box">
-	    <div class="outside-circle"><div class="inner-circle"></div></div>
+	    <a href="#">
+			<div class="outside-circle"><div class="inner-circle"></div></div>
+		</a>
 		<h1>NAME HERE</h1>
 		<h2>SURNAME</h2>
 		<h3>graphic designer</h3>
@@ -38,10 +40,14 @@
 			<div class="name-section"><h2>Contact</h2></div>			
 		</div>
 		<form class="contact-info">
-		<label for="address">Address<input type="text" name="address" value="Main Street, City." readonly></label>
-		<label for="address">E-mail<input type="text" name="address" value="contact@domain.com" readonly></label>
-		<label for="address">Phone<input type="text" name="address" value="555-555-555" readonly></label>
-		<label for="address">Website<input type="text" name="address" value="www.yourweb.com" readonly></label>
+		<div class="row-name"><label for="address">Address</label></div>
+			<div class="row-info"><input type="text" name="address" value="Main Street, City." readonly="readonly" /></div>
+		<div class="row-name"><label for="e-mail">E-mail</label></div>
+			<div class="row-info"><input type="text" name="e-mail" value="contact@domain.com" readonly /></div>
+		<div class="row-name"><label for="phone">Phone</label></div>
+			<div class="row-info"><input type="text" name="phone" value="555-555-555" readonly /></div>
+		<div class="row-name"><label for="website">Website</label></div>
+			<div class="row-info"><input type="text" name="website" value="www.yourweb.com" readonly /></div>
 		</form>
 	</div>
 
@@ -205,7 +211,7 @@
 		</div>
 	</div>
 	</div>	
-	<div class="clear"></div>
+	
 	</div>	
 	
 <footer>

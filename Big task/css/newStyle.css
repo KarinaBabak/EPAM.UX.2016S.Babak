@@ -15,6 +15,7 @@ body {
 	background-color: #fff;
 	padding: 30px;
 	box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);	
+	overflow:hidden;
 }
 
 
@@ -25,7 +26,12 @@ body {
 	line-height: 40px;
 	margin:7px 0 40px 0;
 }
-
+.photo-box a{
+	margin:0 auto;
+	display:block;
+	width:187px;
+	border-radius: 100px;
+}
 .photo-box .outside-circle{
 	border-radius:100px;
 	border:1px solid #0270ba;
@@ -92,33 +98,24 @@ body {
 	display:inline-block;
 	vertical-align: middle;
 }
-.section .icon-inner-circle{
-	width:50px;
-	height:50px;
-	border-radius:100px;
-	background-color: #0270ba;
-	margin:3px;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 
-.icon-of-profile{
+.icon-of-profile::before{
 	background-image:url('../images/icon_profile.png');
 }
-.icon-of-education{
+.icon-of-education::before{
 	background-image:url('../images/icon_education.png');
 }
-.icon-of-skills{
+.icon-of-skills::before{
 	background-image:url('../images/icon_skills.png');
 }
-.icon-of-experience{
+.icon-of-experience::before{
 	background-image:url('../images/icon_experience.png');
 	background-size: 57%;
 }
-.icon-of-contact{
+.icon-of-contact::before{
 	background-image:url('../images/icon_phone.png');
 }
-.icon-of-software{
+.icon-of-software::before{
 	background-image:url('../images/icon_software.png');
 }
 
@@ -134,16 +131,33 @@ body {
 	font-size: 32px;
 	color: #0270ba;
 	text-transform: uppercase;	
-	margin: 0 0 0 4px;
+	margin: 0 0 5px 0;
 	font-family: "MyriadProBold";
-}
-.section-header .name-section h2{
-	margin: 0 0 0 13px;
+	overflow: hidden;   
+	max-width: 300px;	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;	
 }
 
-.section .icon-of-section, .section .name-section, .section .line{
+.section .icon-of-section, .section .section-header .name-section{
 	display:inline-block;
 	vertical-align: middle;
+}
+
+.section .section-header .name-section::before{	
+	content: "";	
+	border-radius:40px;
+	border: 3px solid #FFF;
+	width:50px;
+	height:50px;
+	margin: 9px 17px 11px 1px;
+	display:inline-block;
+	vertical-align: middle;
+	background-color:#0270ba;
+	box-shadow: 0 0 0 1px #0270ba;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .section .section-header .name-section::after{	
@@ -151,22 +165,28 @@ body {
 	background-color: #0270ba;
 	height: 4px;
 	width: 200%;
-	margin: 0 -9px 9px 6px;
-	display: inline-block;
-	
-}
-
-.section .line{
-	background-color: #0270ba;
-	height: 4px;
-	width: 100%;
-	margin: 2px 0 0 6px;
+	margin: 13px 0 19px 6px;
+	vertical-align: middle;
+	display: inline-block;	
 }
 
 .icon-of-section{	
 	margin:0;	
 }
 
+.section form .row-name{
+	margin: 0px 0 24px 0;
+    display: block;	
+	display: inline-block;
+}
+.section form .row-info{	
+	float:right;
+	width:70%;
+}
+
+.section .contact-info{
+	margin:27px 0 0 0;
+}
 
 .section form label{
 	color: #0270ba;
@@ -175,21 +195,13 @@ body {
 	text-transform: uppercase;	
 }
 
-
-.section .contact-info{
-	margin:27px 0 0 0;
+.section form input:read-only{		
+	border:0;	
+	font-size: 16px;	
 }
-
-.section form label{
-	margin: 0px 0 24px 0;
-    display: block;
-}
-
-.section form input:read-only{	
-	float:right;
-	width:70%;	
-	border:0;
-	margin: 3px 0 0 0;
+.section form input:-moz-read-only
+{		
+	border:0;	
 	font-size: 16px;	
 }
 
@@ -335,7 +347,8 @@ body {
 }
 footer{	
 	clear:both;
-	margin:0 0 20px 0;
+	margin:0 0 20px 0;	
+	bottom:0;
 }
 footer a{
 	margin: 0 auto;
@@ -347,4 +360,3 @@ footer a{
     width: 424px;
     background-size: 80%;		
 }
-

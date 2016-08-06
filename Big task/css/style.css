@@ -15,6 +15,7 @@ body {
 	background-color: #fff;
 	padding: 30px;
 	box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);	
+	overflow: hidden;
 }
 
 .left_panel{
@@ -32,6 +33,12 @@ body {
 	width:340px;
 	line-height: 40px;
 	margin:7px 0 40px 0;
+}
+.photo-box a{
+	margin:0 auto;
+	display:block;
+	width:187px;
+	border-radius: 100px;
 }
 
 .name
@@ -95,6 +102,16 @@ body {
 	text-transform: uppercase;	
 	margin: 0 0 0 4px;
 	font-family: "MyriadProBold";
+	display: inline-block;
+	font-size: 32px;
+	color: #0270ba;
+	text-transform: uppercase;	
+	margin: 0 0 0 4px;
+	font-family: "MyriadProBold";
+	overflow: hidden;   
+	max-width: 300px;	
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .right_panel .section-header .name-section h2{
 	margin: 0 0 0 13px;
@@ -156,6 +173,20 @@ body {
 }
 
 
+.section form .row-name{
+	margin: 0px 0 24px 0;
+    display: block;	
+	display: inline-block;
+}
+.section form .row-info{	
+	float:right;
+	width:70%;
+}
+
+.section .contact-info{
+	margin:27px 0 0 0;
+}
+
 .section form label{
 	color: #0270ba;
 	font-family: "MyriadProBold";
@@ -163,21 +194,13 @@ body {
 	text-transform: uppercase;	
 }
 
-
-.section .contact-info{
-	margin:27px 0 0 0;
+.section form input:read-only{		
+	border:0;	
+	font-size: 16px;	
 }
-
-.section form label{
-	margin: 0px 0 24px 0;
-    display: block;
-}
-
-.section form input:read-only{	
-	float:right;
-	width:70%;	
-	border:0;
-	margin: 3px 0 0 0;
+.section form input:-moz-read-only
+{		
+	border:0;	
 	font-size: 16px;	
 }
 
@@ -285,7 +308,7 @@ body {
 	background-color: #0270ba;
 	height: 4px;
 	width: 200%;
-	margin: 0 -9px 9px 6px;
+	margin: 0 -9px 19px 6px;
 	display: inline-block;
 	
 }
@@ -311,7 +334,7 @@ body {
 }
 
 .width-94{
-	width:90%;
+	width:94%;
 }
 .width-80{
 	width:80%;
@@ -335,6 +358,7 @@ body {
 footer{	
 	clear:both;
 	margin:0 0 20px 0;
+	bottom:0;
 }
 footer a{
 	margin: 0 auto;
