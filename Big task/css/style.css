@@ -92,7 +92,7 @@ body {
 .section .section-header{
 	white-space:nowrap;
 	overflow:hidden;
-	margin: 3px 0 10px 0;
+	margin: 3px 0 8px 0;	
 }
 
 .section .section-header .name-section h2{
@@ -100,64 +100,63 @@ body {
 	font-size: 32px;
 	color: #0270ba;
 	text-transform: uppercase;	
-	margin: 0 0 0 4px;
-	font-family: "MyriadProBold";
-	display: inline-block;
-	font-size: 32px;
-	color: #0270ba;
-	text-transform: uppercase;	
-	margin: 0 0 0 4px;
+	margin: 0 0 5px 0;
 	font-family: "MyriadProBold";
 	overflow: hidden;   
 	max-width: 300px;	
 	white-space: nowrap;
 	text-overflow: ellipsis;
-}
-.right_panel .section-header .name-section h2{
-	margin: 0 0 0 13px;
+	vertical-align: middle;	
 }
 
-.section .icon-of-section, .section .name-section, .section .line{
+.section .icon-of-section, .section .section-header .name-section{
 	display:inline-block;
 	vertical-align: middle;
 }
 
-.section .icon-outside-circle{
+.section .section-header .name-section::before{	
+	content: "";	
 	border-radius:40px;
-	border:1px solid #0270ba;
-	width:56px;
-	height:56px;
-	margin: 9px auto 11px;
-	display:inline-block;
-	vertical-align: middle;
-}
-.section .icon-inner-circle{
+	border: 3px solid #FFF;
 	width:50px;
 	height:50px;
-	border-radius:100px;
-	background-color: #0270ba;
-	margin:3px;
+	margin: 9px 17px 11px 1px;
+	display:inline-block;
+	vertical-align: middle;
+	background-color:#0270ba;
+	box-shadow: 0 0 0 1px #0270ba;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
-.icon-of-profile{
+.section .section-header .name-section::after{	
+	content: "";
+	background-color: #0270ba;
+	height: 4px;
+	width: 200%;
+	margin: 13px 0 19px 6px;
+	vertical-align: middle;
+	display: inline-block;	
+}
+
+
+.icon-of-profile::before{
 	background-image:url('../images/icon_profile.png');
 }
-.icon-of-education{
+.icon-of-education::before{
 	background-image:url('../images/icon_education.png');
 }
-.icon-of-skills{
+.icon-of-skills::before{
 	background-image:url('../images/icon_skills.png');
 }
-.icon-of-experience{
+.icon-of-experience::before{
 	background-image:url('../images/icon_experience.png');
 	background-size: 57%;
 }
-.icon-of-contact{
+.icon-of-contact::before{
 	background-image:url('../images/icon_phone.png');
 }
-.icon-of-software{
+.icon-of-software::before{
 	background-image:url('../images/icon_software.png');
 }
 
@@ -303,15 +302,7 @@ body {
 	color:black;
 	font-weight:normal;
 }
-.section .section-header .name-section::after{	
-	content: "";
-	background-color: #0270ba;
-	height: 4px;
-	width: 200%;
-	margin: 0 -9px 19px 6px;
-	display: inline-block;
-	
-}
+
 .section .soft{
 	width:44%;
 	float:left;

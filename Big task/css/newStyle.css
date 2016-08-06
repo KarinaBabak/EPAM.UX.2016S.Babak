@@ -18,7 +18,6 @@ body {
 	overflow:hidden;
 }
 
-
 .photo-box{
 	float:left;
 	text-align:center;
@@ -87,16 +86,6 @@ body {
     float: left;
 	font-size: 13px;	
 	width: 100%;	
-}
-
-.section .icon-outside-circle{
-	border-radius:40px;
-	border:1px solid #0270ba;
-	width:56px;
-	height:56px;
-	margin: 9px auto 11px;
-	display:inline-block;
-	vertical-align: middle;
 }
 
 .icon-of-profile::before{
