@@ -16,6 +16,7 @@ body {
 	padding: 30px;
 	box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);	
 	overflow:hidden;
+	min-height: calc(100vh - 45px);
 }
 
 .photo-box{
@@ -111,8 +112,7 @@ body {
 .section .section-header{
 	white-space:nowrap;
 	overflow:hidden;
-	margin: 3px 0 8px 0;
-	
+	margin: 3px 0 0 0;	
 }
 
 .section .section-header .name-section h2{
@@ -163,18 +163,8 @@ body {
 	margin:0;	
 }
 
-.section form .row-name{
-	margin: 0px 0 24px 0;
-    display: block;	
-	display: inline-block;
-}
-.section form .row-info{	
-	float:right;
-	width:70%;
-}
-
 .section .contact-info{
-	margin:27px 0 0 0;
+	margin:14px 0 0 0;
 }
 
 .section form label{
@@ -182,16 +172,24 @@ body {
 	font-family: "MyriadProBold";
     font-size: 16px;
 	text-transform: uppercase;	
+	margin: 0px 0 24px 0;
+    display: block;		
 }
 
 .section form input:read-only{		
 	border:0;	
-	font-size: 16px;	
+	font-family: "MyriadProRegular";
+	font-size: 15px;	
+	float:right;
+	width:70%;
+	margin: -42px 0 0 0;
 }
 .section form input:-moz-read-only
 {		
 	border:0;	
-	font-size: 16px;	
+	font-size: 16px;
+	float:right;
+	width:70%;	
 }
 
 .skills_box{
@@ -223,7 +221,7 @@ body {
 }
 
 .section .item{
-	margin: 0 0 0px 9px;
+	margin: 11px 0 0 9px;
 	float:right;
 	clear: both;	
 }
