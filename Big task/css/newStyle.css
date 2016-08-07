@@ -347,3 +347,28 @@ footer a{
     width: 424px;
     background-size: 80%;		
 }
+
+
+@media all and (max-width: 700px) {
+	body{
+		max-width: 700px;
+		min-width:450px;
+	}
+	.main{
+		width:96%;
+		min-width:450px;
+		padding: 4% 2%;
+		margin: 0 auto;
+	}
+	.photo-box, .section{
+		float: none;
+		width: 96% !important;
+		min-width: 450px;
+		margin: 0 auto;
+	}
+	
+	.section .section-header{
+		clear: both;
+		margin: 30px 0 20px;
+	}
+}

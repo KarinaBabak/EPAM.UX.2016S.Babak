@@ -87,8 +87,14 @@ body {
 .section{
 	margin: 0 0 28px 0;
     float: left;
-	font-size: 13px;	
-	width: 100%;	
+	font-size: 13px;
+	
+}
+.left_panel .section{
+	width: 340px;	
+}
+.right_panel .section{
+	width: 510px;	
 }
 .section .section-header{
 	white-space:nowrap;
@@ -134,7 +140,7 @@ body {
 	content: "";
 	background-color: #0270ba;
 	height: 4px;
-	width: 200%;
+	width: 700px;
 	margin: 13px 0 19px 6px;
 	vertical-align: middle;
 	display: inline-block;	
@@ -202,9 +208,6 @@ body {
 	width:70%;	
 }
 
-.skills_box{
-	margin:23px 0;
-}
 .skill{
 	width:268px;
 	margin:13px auto;
@@ -231,7 +234,7 @@ body {
 }
 
 .section .item{
-	margin: 5px 0 0 9px;
+	margin:7px 0 0 9px;
 	float:right;
 	clear: both;	
 }
@@ -248,17 +251,6 @@ body {
 	position: absolute;
 }
 
-.item .content .title::before{	
-	width:16px;
-	height:16px;
-	border-radius:8px;
-	float:left;
-	background-color:black;
-    margin-top: 7px;	
-	content:"";
-	margin-left: -35px;
-	position: absolute;
-}
 .section .item .content p b{
 	margin-right: 13px;
 	font-family: "MyriadProBold";
@@ -268,10 +260,15 @@ body {
     overflow: hidden;     
     text-overflow: ellipsis; 
 }
-.section .item .content .title h1{
+.section .item .content .title h1.blue-subtitle{
 	font-size: 20px;
 	font-family: "MyriadProBold";
 	color: #0270ba;	
+}
+.section .item .content .title h1{
+	font-size: 20px;
+	font-family: "MyriadProBold";
+	text-transform:uppercase;		
 }
 .section .item .title{
 	font-size: 20px;
@@ -300,6 +297,7 @@ body {
 	margin-left:22px;
 	color:black;
 	font-weight:normal;
+	text-transform:none;
 }
 
 .section .soft{
@@ -361,3 +359,27 @@ footer a{
     background-size: 80%;		
 }
 
+
+@media all and (max-width: 700px) {
+	body{
+		max-width: 700px;
+		min-width:450px;
+	}
+	.main{
+		width:96%;
+		min-width:450px;
+		padding: 4% 2%;
+		margin: 0 auto;
+	}
+	.right_panel, .left_panel, .photo-box, .section{
+		float: none;
+		width: 96% !important;
+		min-width: 450px;
+		margin: 0 auto;
+	}
+	
+	.section .section-header{
+		clear: both;
+		margin: 30px 0 20px;
+	}
+}
