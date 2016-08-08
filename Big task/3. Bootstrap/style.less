@@ -26,7 +26,7 @@ body {
 	padding: 30px;
 	box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);	
 	overflow: hidden;
-	min-height: calc(100vh - 45px);
+	min-height: calc(~"100vh - 45px");
 }
 
 .photo-box{
@@ -93,6 +93,13 @@ body {
 	color: @text-color;
 }
 
+.inside-section-header{
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+}
+
+
 .name
 {		
 	margin-bottom: 5px;
@@ -100,51 +107,193 @@ body {
 
 .section{
 	margin: 0 0 28px 0;   
-	font-size: 13px;	
+	font-size: 13px;
+	
+	.section-header{
+		white-space:nowrap;
+		overflow:hidden;
+		margin:0;
+		clear: both;
+	}	
+	
+	.item{
+		margin:7px 0 0 9px;
+		float:right;
+		clear: both;
+		
+		.title{
+			font-size: 20px;
+			
+			h1{
+				.text(20px, MyriadProBold);				
+				text-transform:uppercase;	
+				
+				&:after{
+					.text(20px, MyriadProRegular, #000);		
+					content:"// Feb 2011 - Jun 2014";					
+					margin-left:22px;
+					color:black;
+					font-weight:normal;
+					text-transform:none;
+				}								
+			}
+			
+			.blue-subtitle{
+					.text(20px, MyriadProBold, @color-blue);					
+			}
+				
+			&:before{	
+				.draw-circle(16px, 8px, #000);				
+				float:left;				
+				margin-top: 2px;	
+				content:"";
+				margin-left: -35px;
+				position: absolute;
+			}		
+		}
+		
+		.content{
+			width: 93.3%;
+			float:right;
+			margin-bottom: 10px;
+
+			h2{
+				font-size: 20px;
+				font-weight: normal;	
+				text-transform: uppercase;
+				margin: 4px 0 3px;
+			}	
+
+			p{
+				b{
+					margin-right: 13px;
+					font-family: "MyriadProBold";
+					text-transform: uppercase;	
+				}
+
+				.text-size{	
+					overflow: hidden;     
+					text-overflow: ellipsis; 
+				}				
+			}			
+		}
+		
+		
+	}	
+	
+	.subtitle{
+		font-size: 20px;
+		text-transform: uppercase;
+		margin: 4px 0 3px;
+	}
+	
+	.name-section {		
+		h2{
+			.inside-section-header;
+			.text(32px,MyriadProBold,@color-blue);		
+			text-transform: uppercase;	
+			margin: 0 0 5px 0;	
+			overflow: hidden;   
+			max-width: 300px;				
+			white-space: nowrap;
+			text-overflow: ellipsis;		
+		}
+		
+		&:before{		
+			.inside-section-header;		
+			.draw-icon(50px,40px);	
+			border: 3px solid #FFF;	
+			margin: 9px 17px 11px 1px;			
+		}
+		
+		&:after {
+			.inside-section-header;			
+			background-color: @color-blue;
+			height: 4px;
+			width: 700px;
+			margin: 13px 0 19px 6px;			
+		}			
+	}	
+	
+	.contact-info{
+			margin:14px 0 0 0;
+	}
+	
+	
+	form{
+		.contact-row{
+			.text(16px,MyriadProBold);
+			text-transform: uppercase;	
+			margin: 0 0 20px 0;
+			padding: 0;
+				
+			label{
+				color: @color-blue;
+				padding: 0;
+			}
+	
+			input:read-only{	
+				border:0;
+				.text(15px,MyriadProRegular);		
+			}
+	
+			input:-moz-read-only{		
+				border:0;	
+				.text(15px,MyriadProRegular);	
+				width:70%;	
+			}
+		}
+	}
+	
+	
+	.soft{
+		margin: 9px -15px;
+		
+		&:nth-child(2n+1){		
+			margin-right:9%;
+		}
+		
+		.soft-progress{
+			width:100%;	
+			background-color: #e6e6e6;	
+			margin: 8px 0 0 0;
+			display: inline-block;
+		}
+		
+		.progress-bar{	
+			height:18px;
+			background-color: #0270ba;
+		}
+	}
+	
+	
 }
 
-.section .section-header{
-	white-space:nowrap;
-	overflow:hidden;
-	margin:0;
-    clear: both;
+.skill{	
+	margin:13px auto;
+	text-align:center;
+	.text(18px);	
+	text-transform:uppercase;	
+	clear: both;
+	
+	.skill-progress{
+		margin: 4px 0 0 0;
+		
+		.empty{
+			.draw-circle(14px, 7px, #e6e6e6, #e6e6e6);				
+		}
+	}
+	
+	li{	
+		margin:0 4px;
+		display:inline-block;		
+		.draw-circle(14px, 7px, @color-blue);		
+		list-style-type:circle;		
+	}	
 }
 
-.section .section-header .name-section h2{
-	display: inline-block;
-	.text(32px,MyriadProBold,@color-blue);		
-	text-transform: uppercase;	
-	margin: 0 0 5px 0;	
-	overflow: hidden;   
-	max-width: 300px;	
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	vertical-align: middle;	
-}
 
-.section .icon-of-section, .section .section-header .name-section{
-	display:inline-block;
-	vertical-align: middle;
-}
 
-.section .section-header .name-section::before{	
-	content: "";
-	.draw-icon(50px,40px);	
-	border: 3px solid #FFF;	
-	margin: 9px 17px 11px 1px;
-	display:inline-block;
-	vertical-align: middle; 
-}
-
-.section .section-header .name-section::after{	
-	content: "";
-	background-color: @color-blue;
-	height: 4px;
-	width: 700px;
-	margin: 13px 0 19px 6px;
-	vertical-align: middle;
-	display: inline-block;
-}
 
 .icon-of-profile::before{
 	background-image:url('images/icon_profile.png');
@@ -171,152 +320,6 @@ body {
 	background-size: 70%;
 }
 
-.section .line{
-	background-color: @color-blue;
-	height: 4px;
-	width: 100%;
-	margin: 2px 0 0 6px;
-}
-
-.icon-of-section{	
-	margin:0;	
-}
-
-.section .contact-info{
-	margin:14px 0 0 0;
-}
-
-.section form .contact-row{
-	.text(16px,MyriadProBold);
-	text-transform: uppercase;	
-	margin: 0 0 20px 0;
-	padding: 0;
-	
-	label{
-		color: @color-blue;
-		padding: 0;
-	}
-	input:read-only{		
-		border:0;	
-		.text(15px,MyriadProRegular);		
-	}
-	input:-moz-read-only
-	{		
-		border:0;	
-		.text(15px,MyriadProRegular);	
-		width:70%;	
-	}
-}
-
-.skill{	
-	margin:13px auto;
-	text-align:center;
-	.text(18px);	
-	text-transform:uppercase;	
-	clear: both;
-	
-	.skill-progress{
-		margin: 4px 0 0 0;
-		
-		.empty{
-			background-color: #e6e6e6;
-		}
-	}
-	
-	li{	
-		margin:0 4px;
-		display:inline-block;		
-		.draw-circle(14px, 7px, @color-blue, #fff);		
-		list-style-type:circle;		
-	}	
-}
-
-.section .item{
-	margin:7px 0 0 9px;
-	float:right;
-	clear: both;	
-}
-
-.item .content .title::before{	
-	width:16px;
-	height:16px;
-	border-radius:8px;
-	float:left;
-	background-color:black;
-    margin-top: 7px;	
-	content:"";
-	margin-left: -35px;
-	position: absolute;
-}
-
-.section .item .content p b{
-	margin-right: 13px;
-	font-family: "MyriadProBold";
-	text-transform: uppercase;	
-}
-.section .item .content p.text-size{	
-    overflow: hidden;     
-    text-overflow: ellipsis; 
-}
-.section .item .content .title h1.blue-subtitle{
-	font-size: 20px;
-	font-family: "MyriadProBold";
-	color: @color-blue;
-}
-.section .item .content .title h1{
-	font-size: 20px;
-	font-family: "MyriadProBold";
-	text-transform:uppercase;		
-}
-.section .item .title{
-	font-size: 20px;
-}
-
-.section .content h2{
-	font-size: 20px;
-	font-weight: normal;	
-    text-transform: uppercase;
-    margin: 4px 0 3px;
-}
-.section .subtitle{
-	font-size: 20px;
-    text-transform: uppercase;
-    margin: 4px 0 3px;
-}
-.section .item .content{
-	width: 93.3%;
-	float:right;
-	margin-bottom: 10px;	
-}
-
-.section .item .content .title h1::after{
-	content:"// Feb 2011 - Jun 2014";
-	font-family: "MyriadProRegular";
-	margin-left:22px;
-	color:black;
-	font-weight:normal;
-	text-transform:none;
-}
-
-.section .soft{
-	margin: 9px -15px;
-}
-
-.section .soft:nth-child(2n+1){		
-	margin-right:9%;
-}
-
-.section .soft .soft-progress{
-	width:100%;	
-	background-color: #e6e6e6;	
-	margin: 8px 0 0 0;
-	display: inline-block;
-}
-
-.section .soft .progress-bar{	
-	height:18px;
-	background-color: #0270ba;
-}
 
 .width-94{
 	width:94%;
@@ -340,20 +343,23 @@ body {
 .clear{
 	clear: both;
 }
+
+
 footer{	
 	clear:both;
 	margin:0 0 20px 0;
 	bottom:0;
-}
-footer a{
-	margin: 0 auto;
-    display: block;
-    background-image: url('../images/logo.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 45px;
-    width: 424px;
-    background-size: 80%;		
+	
+	a{
+		margin: 0 auto;
+		display: block;
+		background-image: url('../images/logo.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 45px;
+		width: 424px;
+		background-size: 80%;		
+	}
 }
 
 
@@ -368,7 +374,7 @@ footer a{
 		padding: 4% 2%;
 		margin: 0 auto;
 	}
-	.right_panel, .left_panel, .photo-box, .section{
+	.photo-box, .section{
 		float: none;
 		width: 96% !important;
 		min-width: 450px;
