@@ -1,0 +1,385 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "MyriadProRegular", Myriad, Arial, sans-serif;
+	background-color:#fff;
+	background-image: url('../images/bg.jpg');
+}
+
+.main{
+	width: 900px;
+	margin: 54px auto 54px auto;
+	background-color: #fff;
+	padding: 30px;
+	box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);	
+	overflow: hidden;
+	min-height: calc(100vh - 45px);
+}
+
+.left_panel{
+	width: 340px;
+	float: left;
+}
+.right_panel {
+    width: 510px;
+    float: right;
+}
+
+.photo-box{
+	float:left;
+	text-align:center;
+	width:340px;
+	line-height: 40px;
+	margin:7px 0 45px 0;
+}
+.photo-box a{
+	margin:0 auto;
+	display:block;
+	width:187px;
+	border-radius: 100px;
+}
+
+.name
+{		
+	margin-bottom: 5px;
+}
+
+.photo-box h1{ 
+	padding: 11px 0 1px 0;
+	font-size: 45px;	
+	font-weight: normal;
+	font-variant:small-caps;
+}
+
+.photo-box h2{     
+	font-size: 49px;	
+	text-transform: uppercase;
+	font-weight: bold;	
+	font-family: "MyriadProBold";
+	    margin-bottom: 5px;
+}
+
+.photo-box h3{
+	font-size: 19px;	
+	text-transform: uppercase;	
+	font-family: "MyriadProBold";
+}
+
+.photo-box .outside-circle{
+	border-radius:100px;
+	border:1px solid #0270ba;
+	width:186px;
+	height:186px;
+	margin: 9px auto 11px;
+}
+
+.photo-box .inner-circle{
+	width:162px;
+	height:162px;
+	border-radius:100px;
+	background-color: #0270ba;
+	margin:12px;
+}
+
+.section{
+	margin: 0 0 28px 0;
+    float: left;
+	font-size: 13px;
+	
+}
+.left_panel .section{
+	width: 340px;	
+}
+.right_panel .section{
+	width: 510px;	
+}
+.section .section-header{
+	white-space:nowrap;
+	overflow:hidden;
+	margin:0;	
+}
+
+.section .section-header .name-section h2{
+	display: inline-block;
+	font-size: 32px;
+	color: #0270ba;
+	text-transform: uppercase;	
+	margin: 0 0 5px 0;
+	font-family: "MyriadProBold";
+	overflow: hidden;   
+	max-width: 300px;	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;	
+}
+
+.section .icon-of-section, .section .section-header .name-section{
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.section .section-header .name-section::before{	
+	content: "";	
+	border-radius:40px;
+	border: 3px solid #FFF;
+	width:50px;
+	height:50px;
+	margin: 9px 17px 11px 1px;
+	display:inline-block;
+	vertical-align: middle;
+	background-color:#0270ba;
+	box-shadow: 0 0 0 1px #0270ba;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.section .section-header .name-section::after{	
+	content: "";
+	background-color: #0270ba;
+	height: 4px;
+	width: 700px;
+	margin: 13px 0 19px 6px;
+	vertical-align: middle;
+	display: inline-block;	
+}
+
+
+.icon-of-profile::before{
+	background-image:url('../images/icon_profile.png');
+}
+.icon-of-education::before{
+	background-image:url('../images/icon_education.png');
+}
+.icon-of-skills::before{
+	background-image:url('../images/icon_skills.png');
+}
+.icon-of-experience::before{
+	background-image:url('../images/icon_experience.png');
+	background-size: 57%;
+}
+.icon-of-contact::before{
+	background-image:url('../images/icon_phone.png');
+}
+.icon-of-software::before{
+	background-image:url('../images/icon_software.png');
+}
+
+.section .line{
+	background-color: #0270ba;
+	height: 4px;
+	width: 100%;
+	margin: 2px 0 0 6px;
+}
+
+.icon-of-section{	
+	margin:0;	
+}
+
+
+.section .contact-info{
+	margin:14px 0 0 0;
+}
+
+.section form label{
+	color: #0270ba;
+	font-family: "MyriadProBold";
+    font-size: 16px;
+	text-transform: uppercase;	
+	margin: 0px 0 24px 0;    	
+	display: block;
+}
+
+.section form input:read-only{		
+	border:0;	
+	font-family: "MyriadProRegular";
+	font-size: 15px;	
+	float:right;
+	width:70%;
+	margin: -42px 0 0 0;
+}
+.section form input:-moz-read-only
+{		
+	border:0;	
+	font-size: 16px;
+	float:right;
+	width:70%;	
+}
+
+.skill{
+	width:268px;
+	margin:13px auto;
+	text-align:center;
+	font-size:18px;
+	text-transform:uppercase;	
+	clear: both;
+}
+.skill-progress{
+	margin: 4px 0 0 0;
+}
+
+.skill li{	
+	margin:0 4px;
+	display:inline-block;
+	width: 14px;
+	height: 14px;
+	background-color: #0270ba;
+	border-radius: 7px;
+	list-style-type:circle;
+}
+.skill li.empty{
+	background-color: #e6e6e6;
+}
+
+.section .item{
+	margin:7px 0 0 9px;
+	float:right;
+	clear: both;	
+}
+
+.item .content .title::before{	
+	width:16px;
+	height:16px;
+	border-radius:8px;
+	float:left;
+	background-color:black;
+    margin-top: 7px;	
+	content:"";
+	margin-left: -35px;
+	position: absolute;
+}
+
+.section .item .content p b{
+	margin-right: 13px;
+	font-family: "MyriadProBold";
+	text-transform: uppercase;	
+}
+.section .item .content p.text-size{	
+    overflow: hidden;     
+    text-overflow: ellipsis; 
+}
+.section .item .content .title h1.blue-subtitle{
+	font-size: 20px;
+	font-family: "MyriadProBold";
+	color: #0270ba;	
+}
+.section .item .content .title h1{
+	font-size: 20px;
+	font-family: "MyriadProBold";
+	text-transform:uppercase;		
+}
+.section .item .title{
+	font-size: 20px;
+}
+
+.section .content h2{
+	font-size: 20px;
+	font-weight: normal;	
+    text-transform: uppercase;
+    margin: 4px 0 3px;
+}
+.section .subtitle{
+	font-size: 20px;
+    text-transform: uppercase;
+    margin: 4px 0 3px;
+}
+.section .item .content{
+	width: 93.3%;
+	float:right;
+	margin-bottom: 10px;	
+}
+
+.section .item .content .title h1::after{
+	content:"// Feb 2011 - Jun 2014";
+	font-family: "MyriadProRegular";
+	margin-left:22px;
+	color:black;
+	font-weight:normal;
+	text-transform:none;
+}
+
+.section .soft{
+	width:44%;
+	float:left;
+	margin: 9px 0;
+}
+
+.section .soft:nth-child(2n){		
+	margin-right:12%;
+}
+
+.section .soft .soft-progress{
+	width:100%;	
+	background-color: #e6e6e6;	
+	margin: 8px 0 0 0;
+}
+
+.section .soft .progress{	
+	height:18px;
+	background-color: #0270ba;
+}
+
+.width-94{
+	width:94%;
+}
+.width-80{
+	width:80%;
+}
+.width-72{
+	width:72%;
+}
+.width-60{
+	width:60%;
+}
+.width-57{
+	width:57%;
+}
+.width-88{
+	width:88%;
+}
+
+.clear{
+	clear: both;
+}
+footer{	
+	clear:both;
+	margin:0 0 20px 0;
+	bottom:0;
+}
+footer a{
+	margin: 0 auto;
+    display: block;
+    background-image: url('../images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 424px;
+    background-size: 80%;		
+}
+
+
+@media all and (max-width: 700px) {
+	body{
+		max-width: 700px;
+		min-width:450px;
+	}
+	.main{
+		width:96%;
+		min-width:450px;
+		padding: 4% 2%;
+		margin: 0 auto;
+	}
+	.right_panel, .left_panel, .photo-box, .section{
+		float: none;
+		width: 96% !important;
+		min-width: 450px;
+		margin: 0 auto;
+	}
+	
+	.section .section-header{
+		clear: both;
+		margin: 30px 0 20px;
+	}
+}
