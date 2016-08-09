@@ -1,0 +1,29 @@
+.draw-circle(@diameter, @border-radius:100px, @color:#fff, @border-color:@color-blue){
+	width:@diameter;
+	height:@diameter;
+	border-radius:@border-radius;
+	border:1px solid @border-color;	
+	background-color:@color;
+}
+
+.draw-icon(@diameter:50px, @border-radius:50px){
+	width:@diameter;
+	height:@diameter;
+	border-radius:@border-radius;	
+	box-shadow: 0 0 0 1px @color-blue;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color:@color-blue;
+}
+
+.text(@size:20px, @text-family:MyriadProRegular, @text-color:#000){
+	font-size: @size;
+	font-family: @text-family;
+	color: @text-color;
+}
+
+.inside-section-header{
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+}
