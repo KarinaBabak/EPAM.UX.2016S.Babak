@@ -43,21 +43,19 @@ body {
 	}
 	h1{ 
 		padding: 11px 0 1px 0;
-		font-size: 45px;	
+		.text(45px);		
 		font-weight: normal;
 		font-variant:small-caps;
 	}
-	h2{     
-		font-size: 49px;	
+	h2{   
+		.text(49px, @weight-font);		
 		text-transform: uppercase;
-		font-weight: bold;	
-		font-family: @weight-font;
+		font-weight: bold;			
 	    margin-bottom: 5px;
 	}
 	h3{
-		font-size: 19px;	
-		text-transform: uppercase;	
-		font-family: @weight-font;
+		.text(19px,@weight-font);		
+		text-transform: uppercase;			
 	}
 	.outside-circle{
 		.draw-circle(186px, 100px);		
@@ -68,8 +66,6 @@ body {
 		margin:12px;
 	}
 }
-
-
 
 
 .name
@@ -115,7 +111,7 @@ body {
 			}
 				
 			&:before{	
-				.draw-circle(16px, 8px, #000);				
+				.draw-circle(16px, 8px, #000, #000);				
 				float:left;				
 				margin-top: 2px;	
 				content:"";
@@ -259,31 +255,27 @@ body {
 }
 
 
-
-
 .icon-of-profile::before{
-	background-image:url('../images/icon_profile.png');
-	background-size: 54%;
+	.icon-picture(~'../images/icon_profile.png',54%);	
 }
+
 .icon-of-education::before{
-	background-image:url('../images/icon_education.png');
-	background-size: 60%;
+	.icon-picture(~'../images/icon_education.png',60%);	
 }
+
 .icon-of-skills::before{
-	background-image:url('../images/icon_skills.png');
-	background-size: 44%;
+	.icon-picture(~'../images/icon_skills.png',44%);	
 }
+
 .icon-of-experience::before{
-	background-image:url('../images/icon_experience.png');
-	background-size: 57%;
+	.icon-picture(~'../images/icon_experience.png',57%);		
 }
+
 .icon-of-contact::before{
-	background-image:url('../images/icon_phone.png');
-	background-size: 60%;
+	.icon-picture(~'../images/icon_phone.png',60%);		
 }
 .icon-of-software::before{
-	background-image:url('../images/icon_software.png');
-	background-size: 70%;
+	.icon-picture(~'../images/icon_software.png',70%);		
 }
 
 
@@ -347,8 +339,10 @@ footer{
 		margin: 0 auto;
 	}
 	
-	.section .section-header{
-		clear: both;
-		margin: 30px 0 20px;
+	.section {
+		.section-header{
+			clear: both;
+			margin: 30px 0 20px;
+		}
 	}
 }
